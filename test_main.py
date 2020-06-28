@@ -15,6 +15,7 @@ PASSWORD = 'huff-puff'
 
 @pytest.fixture
 def client():
+    assert False
     os.environ['JWT_SECRET'] = SECRET
     main.APP.config['TESTING'] = True
     client = main.APP.test_client()
